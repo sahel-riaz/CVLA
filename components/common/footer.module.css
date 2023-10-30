@@ -1,0 +1,60 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid var(--border-lines);
+    position:absolute;
+    left:0;
+    bottom:0;
+    right:0;
+}
+
+.logo {
+    margin-top: 53px;
+}
+
+.buttonWrapper {
+    margin-top: 40px;
+    display: flex;
+    gap: 56px;
+}
+
+.button {
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.socialWrapper {
+    margin-top: 40px;
+    display: flex;
+    gap: 50px;
+}
+
+.social {
+    cursor: pointer;
+}
+
+.contentWrapper {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.heading {
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.byline {
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.plug {
+    margin-top: 20px;
+    color: var(--plug);
+    font-size: 10px;
+    font-weight: 300;
+    margin-bottom: 53px;
+}
