@@ -18,7 +18,7 @@ body::-webkit-scrollbar {
 :root {
 	--black: #000000;
 	--white: #ffffff;
-	--plug: #00000080;
+	--grey-50: #00000080;
 	--border-lines: #0000001a;
 }
 
