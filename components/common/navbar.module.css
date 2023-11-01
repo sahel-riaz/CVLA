@@ -3,7 +3,7 @@
     padding: 13px 46px 13px 46px;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--border-lines);
+    border-bottom: 1px solid var(--border);
     flex-shrink: 0;
 }
 

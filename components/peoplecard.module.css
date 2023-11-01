@@ -1,5 +1,5 @@
 .container {
-    border: 1px solid var(--border-lines);
+    border: 1px solid var(--border);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
