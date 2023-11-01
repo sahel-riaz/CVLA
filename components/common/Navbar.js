@@ -10,8 +10,8 @@ export default function Navbar() {
         <div className={styles['button']}>RESEARCH</div>
         <div className={styles['button']}>PUBLICATIONS</div>
         <div className={styles['button']}>PROJECTS</div>
-        <div className={styles['button']}>STUDENTS</div>
-        <div className={styles['button']}>MEMBERS</div>
+        <div className={styles['button']}>PEOPLE</div>
+        <div className={styles['button']}>EVENTS</div>
         <div className={styles['button']}>CONTACT US</div>
       </div>
     </div>

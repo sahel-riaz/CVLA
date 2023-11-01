@@ -11,6 +11,7 @@ export default function Footer() {
         <div className={styles["button"]}>PUBLICATIONS</div>
         <div className={styles["button"]}>NEWS</div>
         <div className={styles["button"]}>PEOPLE</div>
+        <div className={styles["button"]}>EVENTS</div>
         <div className={styles["button"]}>CONTACT US</div>
       </div>
       <div className={styles["socialWrapper"]}>
