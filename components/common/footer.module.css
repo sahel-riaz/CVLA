@@ -79,6 +79,11 @@
       margin-top: 20px;
       gap: 20px;
     }
+
+    .social {
+      width: 45px;
+      cursor: pointer;
+    }
   
     .heading {
       font-size: 16px;
@@ -93,7 +98,7 @@
     }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 645px) {
     .container {
       flex-direction: column;
     }
@@ -113,7 +118,12 @@
       margin-top: 20px;
       gap: 18px;
     }
-  
+    
+    .social {
+      width: 40px;
+      cursor: pointer;
+    }
+
     .heading {
       font-size: 14px;
     }
