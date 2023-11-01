@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    padding: 13px 46px 13px 46px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border-lines);
+}
+
+.button-container {
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
