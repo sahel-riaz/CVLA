@@ -30,6 +30,25 @@ export default function Home() {
           <img src="/svgs/expand_more.svg" className={styles["arrow-svg"]} />
         </div>
       </div>
+      <div className={styles["about-us-container"]}>
+        <img src="/svgs/about-us.svg" className={styles["about-us-svg"]} />
+        <div className={styles["about-us-content"]}>
+          <div className={styles["about-us-title"]}>About us</div>
+          <p className={styles["about-us-text"]}>
+            The Advanced Vision and Learning Lab (AVLL) seeks to develop novel
+            artificial intelligence (AI), machine learning (ML), and computer
+            vision (CV) algorithms. We aim to be world leaders in the AI/ML/CV
+            community through innovative solutions, unique perspectives, and
+            reproducible research. Our lab seeks excellence in our research,
+            academic, and professional environments.<br></br>
+            <br></br> AVLL promotes intellectual, professional, and personal
+            growth to achieve desired research and learning outcomes. We hold
+            ourselves accountable to create a diverse, equitable, and inclusive
+            space for all in the lab, at Texas A&M University, and in the
+            broader community.
+          </p>
+        </div>
+      </div>
       <Footer />
     </div>
   );

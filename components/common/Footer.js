@@ -4,7 +4,7 @@ import styles from "./footer.module.css";
 export default function Footer() {
   return (
     <div className={styles["container"]}>
-      <img src="/svgs/nitc-logo.svg" className={styles["logo"]} />
+      <img src="/svgs/logo.svg" className={styles["logo"]} />
       <div className={styles["buttonWrapper"]}>
         <div className={styles["button"]}>ABOUT US</div>
         <div className={styles["button"]}>RESEARCH</div>
