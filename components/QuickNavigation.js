@@ -2,27 +2,18 @@ import React from "react";
 import QuickLinks from "./sub/quick-link";
 import styles from "./quick-navigation.module.css";
 
-export default function QuickNavigation() {
+export default function QuickNavigation({ quickLinks }) {
+  const data = Object.entries(quickLinks).map(([label, desc]) => ({
+    label,
+    desc,
+  }));
   return (
     <div className={styles["container"]}>
       <div className={styles["title"]}>Quick navigation</div>
       <div className={styles["quick-links"]}>
-        <QuickLinks
-          label="Journal"
-          desc="Explore the latest research in academic journals"
-        />
-        <QuickLinks
-          label="Journal"
-          desc="Explore the latest research in academic journals"
-        />
-        <QuickLinks
-          label="Journal"
-          desc="Explore the latest research in academic journals"
-        />
-        <QuickLinks
-          label="Journal"
-          desc="Explore the latest research in academic journals"
-        />
+        {data.map((data, index) => (
+          <QuickLinks key={index} label={data.label} desc={data.desc} />
+        ))}
       </div>
     </div>
   );

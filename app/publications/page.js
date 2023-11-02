@@ -5,11 +5,17 @@ import Navbar from "@/components/common/Navbar";
 import QuickNavigation from "@/components/QuickNavigation";
 
 export default function Publications() {
+  const quickLinks = {
+    "Journals": "Explore the latest research in academic journals",
+    "Conferences": "Discover insights from conferences and symposiums",
+    "Patents": "Access patented innovations and intellectual property",
+    "Book chapters": "Find in-depth knowledge in published book chapters"
+  };
   return (
     <div className={styles["container"]}>
       {/* <Navbar /> */}
       <div className={styles["main-container"]}>
-        <QuickNavigation />
+        <QuickNavigation quickLinks={quickLinks} />
         {/* <div className={styles["publication-cards"]}>
           <PublicationsCard
             image="/svgs/blank-image.svg"
