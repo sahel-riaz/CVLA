@@ -4,7 +4,7 @@ import Navbar from "@/components/common/Navbar";
 import ResearchCard from "@/components/common/ResearchCard";
 import Footer from "@/components/common/Footer";
 
-export default function page() {
+export default function Research() {
   return (
     <div className={styles["big-container"]}>
       {/* <Navbar /> */}

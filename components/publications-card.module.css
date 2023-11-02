@@ -39,9 +39,9 @@
     display: flex;
     gap: 8px;
     cursor: pointer;
-  }
+}
   
-  .read-more-text {
+.read-more-text {
     font-size: 14px;
     font-weight: 400;
-  }
+}

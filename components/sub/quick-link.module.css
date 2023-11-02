@@ -1,0 +1,20 @@
+.container {
+    cursor: pointer;
+}
+
+.link {
+    display: flex;
+    gap: 6px;
+}
+
+.link-label {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.desc {
+    margin-top: 6px;
+    color: var(---grey-50);
+    font-size: 14px;
+    font-weight: 300;
+}
