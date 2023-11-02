@@ -1,0 +1,55 @@
+.container {
+  border-bottom: 1px solid var(--border);
+  width: fit-content;
+  display: flex;
+  gap: 26px;
+  padding: 32px 0 32px 0;
+  align-items: center;
+}
+
+.author-wrapper {
+  display: flex;
+  gap: 11px;
+  color: var(--grey-50);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.title {
+  margin-top: 8px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.sponsor-wrapper {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+}
+
+.sponsor-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.sponsor-info {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.read-more {
+  margin-top: 26px;
+  display: flex;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.read-more-text {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.image {
+    width: 177px;
+    height: 100px;
+}
