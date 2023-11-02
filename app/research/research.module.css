@@ -1,10 +1,13 @@
 .research-container {
-    margin-left: 200px;
-    margin-top: 200px;
+    padding: 100px 0 0 200px;
 }
 
 .heading {
     font-size: 48px;
     font-weight: 600;
+}
+
+.research-cards {
+    margin-top: 48px;
     margin-bottom: 100px;
 }

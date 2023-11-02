@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./research.module.css";
 import Navbar from "@/components/common/Navbar";
 import ResearchCard from "@/components/common/ResearchCard";
+import Footer from "@/components/common/Footer";
 
 export default function page() {
   return (
@@ -44,6 +45,7 @@ export default function page() {
           />
         </div>
       </div>
+      <Footer />  
     </div>
   );
 }
