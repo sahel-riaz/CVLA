@@ -55,9 +55,10 @@
     margin-bottom: 53px;
 }
 
-@media (max-width: 878px) {
+@media (max-width: 1096px) {
     .container {
       flex-direction: column;
+      flex-shrink: 0;
     }
   
     .buttonWrapper {
@@ -97,6 +98,7 @@
 @media (max-width: 645px) {
     .container {
       flex-direction: column;
+      flex-shrink: 0;
     }
   
     .buttonWrapper {
