@@ -3,6 +3,7 @@ import styles from "./page.module.css";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import PeopleCard from "@/components/PeopleCard";
+import ContactUs from "@/components/ContactUs";
 
 export default function Home() {
   return (
@@ -33,8 +34,8 @@ export default function Home() {
       <div className={styles["about-us-container"]}>
         <img src="/svgs/about-us.svg" className={styles["about-us-svg"]} />
         <div className={styles["about-us-content"]}>
-          <div className={styles["about-us-title"]}>About us</div>
-          <p className={styles["about-us-text"]}>
+          <div className={styles["title"]}>About us</div>
+          <p>
             The Advanced Vision and Learning Lab (AVLL) seeks to develop novel
             artificial intelligence (AI), machine learning (ML), and computer
             vision (CV) algorithms. We aim to be world leaders in the AI/ML/CV
@@ -47,6 +48,38 @@ export default function Home() {
             space for all in the lab, at Texas A&M University, and in the
             broader community.
           </p>
+        </div>
+      </div>
+      <div className={styles["join-us-container"]}>
+        <div className={styles["join-us-content"]}>
+          <div className={styles["title"]}>Join Us</div>
+          <div className={styles["join-us-text"]}>
+            <p>
+              If you have an interest in collaborating on the topics mentioned
+              below, please forward your CV via email. (Open to B.Tech, M.Tech,
+              and Ph.D. candidates).
+            </p>
+            <br></br>
+            <ol>
+              <li>Object Movement Pattern detection</li>
+              <li>
+                Deep Learning and IoT Based Object Classification and Movement
+                Tracking
+              </li>
+              <li>Earlier Breast Cancer Detections- mammogram Images</li>
+              <li>
+                Real-Time Traffic Signal Prediction and Control using Deep
+                Q-Network
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div className={styles["contact-card"]}>
+          <ContactUs
+            image="/svgs/contact-email.svg"
+            title="BY EMAIL"
+            info="contactus@nitc.ac.in"
+          />
         </div>
       </div>
       <Footer />

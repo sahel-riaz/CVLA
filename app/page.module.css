@@ -90,13 +90,30 @@
     flex-direction: column;
 }
 
-.about-us-title {
+.title {
     font-size: 38px;
     font-weight: 600;
 }
 
-.about-us-content p {
+.about-us-content p, .join-us-content p, .join-us-content ol {
     font-size: 18px;
     font-weight: 400;
     line-height: 30px; /* 166.667% */
+}
+
+.join-us-container {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    padding: 0 150px 0 150px;
+    display: flex;
+    gap: 95px;
+    justify-content: space-between;
+}
+
+.join-us-content ol {
+    line-height: 40px;
+}
+
+.contact-card {
+    margin-top: 75px;
 }
