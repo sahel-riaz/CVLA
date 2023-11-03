@@ -1,11 +1,19 @@
-import Image from "next/image";
+'use client'
+
+import React from "react";
+import { useRef } from "react";
 import styles from "./page.module.css";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
-import PeopleCard from "@/components/PeopleCard";
 import ContactUs from "@/components/ContactUs";
 
 export default function Home() {
+  const aboutUsRef = useRef(null);
+  const handleClick = () => {
+    if (aboutUsRef.current) {
+      aboutUsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className={styles["container"]}>
       <div className={styles["main-container"]}>
@@ -26,12 +34,12 @@ export default function Home() {
           </div>
           <img src="/svgs/landing-svg.svg" className={styles["landing-svg"]} />
         </div>
-        <div className={styles["learn-more"]}>
+        <div className={styles["learn-more"]} onClick={handleClick}>
           <div className={styles["learn-more-text"]}>Learn more</div>
           <img src="/svgs/expand_more.svg" className={styles["arrow-svg"]} />
         </div>
       </div>
-      <div className={styles["about-us-container"]}>
+      <div className={styles["about-us-container"]} ref={aboutUsRef}>
         <img src="/svgs/about-us.svg" className={styles["about-us-svg"]} />
         <div className={styles["about-us-content"]}>
           <div className={styles["title"]}>About us</div>
@@ -79,6 +87,7 @@ export default function Home() {
             image="/svgs/contact-email.svg"
             title="BY EMAIL"
             info="contactus@nitc.ac.in"
+            height="230px"
           />
         </div>
       </div>
