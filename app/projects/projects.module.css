@@ -13,24 +13,22 @@
     font-weight: 600;
 }
 
-
-.publications {
+.projects {
     margin-top: 48px;
     width: 625px;
     display: flex;
     flex-direction: column;
     gap:48px;
-
 }
 
-.publication-title {
+.project-title {
     color: var(--grey-50);
     font-size: 24px;
     font-weight: 500;
     line-height: 22px;
 }
 
-.publication-list {
+.project-list {
     margin-top: 32px;
     display: flex;
     flex-direction: column;
@@ -46,3 +44,4 @@
     position: sticky;
     top: 0px;
 }
+

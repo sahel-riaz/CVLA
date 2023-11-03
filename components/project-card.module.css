@@ -26,14 +26,31 @@
     line-height: 34px; 
 }
 
-.references {
-    margin-top: 14px;
+.desc {
+    margin-top: 12px;
     color: var(--grey-50);
     font-size: 14px;
     font-weight: 300;
-    line-height: 22px;
+    line-height: 22px; 
 }
 
+.info-wrapper {
+    margin-top: 8px;
+    display: flex;
+    gap: 10px;
+}
+
+.label {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.text {
+    color: var(--grey-50);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px; 
+}
 
 .read-more {
     margin-top: 26px;
