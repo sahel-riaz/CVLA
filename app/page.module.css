@@ -117,3 +117,128 @@
 .contact-card {
     margin-top: 75px;
 }
+
+@media (max-width: 1096px) {
+    .landing-container {
+        padding: 0 30px;
+    }
+    .landing-title {
+        font-size: 30px;
+    }
+    .landing-byline {
+        font-size: 16px;
+    }
+
+    .about-us-svg,
+    .landing-svg {
+        max-width: 80%; /* Reduce the size of the images */
+    }
+    .contact-card {
+        height: 180px; /* Reduce the height of the ContactUs card */
+        width: 220px; /* Reduce the width of the ContactUs card */
+    }
+}
+
+@media (max-width: 768px) {
+    .landing-container {
+        padding: 0 20px;
+        gap: 10px;
+    }
+    .landing-title {
+        font-size: 24px;
+    }
+    .landing-byline {
+        font-size: 16px;
+    }
+    .explore-button {
+        padding: 10px 20px;
+        margin-top: 20px;
+    }
+    .about-us-container {
+        margin-top: 60px;
+        padding: 20px;
+        gap: 10px;
+    }
+    .title {
+        font-size: 22px;
+    }
+    .about-us-content p,
+    .join-us-content p,
+    .join-us-content ol {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .join-us-container {
+        margin-top: 80px;
+        padding: 0 20px;
+        gap: 10px;
+        margin-bottom: 70px; 
+    }
+    .join-us-content ol {
+        line-height: 30px;
+    }
+    .contact-card {
+        margin-top: 40px;
+    }
+
+    .about-us-svg,
+    .landing-svg {
+        max-width: 60%; /* Further reduce the size of the images */
+    }
+    .contact-card {
+        height: 140px; /* Further reduce the height of the ContactUs card */
+        width: 180px; /* Further reduce the width of the ContactUs card */
+    }
+}
+
+@media (max-width: 500px) {
+    .main-container {
+        height: auto; /* Remove 100vh height property */
+    }
+
+    .landing-container {
+        padding: 0 10px;
+        gap: 5px;
+    }
+    .landing-title {
+        font-size: 20px;
+    }
+    .landing-byline {
+        font-size: 13px;
+    }
+    .explore-button {
+        padding: 8px 16px;
+        margin-top: 16px;
+    }
+    .about-us-container {
+        margin-top: 50px;
+        padding: 10px;
+        gap: 5px;
+    }
+    .title {
+        font-size: 18px;
+    }
+    .about-us-content p,
+    .join-us-content p,
+    .join-us-content ol {
+        font-size: 13px;
+        line-height: 20px;
+    }
+    .join-us-container {
+        margin-top: 40px;
+        padding: 0 10px;
+        gap: 5px;
+        margin-bottom: 50px; /* Reduce the distance between "Join Us" and the footer */
+    }
+
+    .join-us-content ol {
+        line-height: 26px;
+    }
+
+    .learn-more,
+    .landing-svg,
+    .about-us-svg,
+    .contact-card {
+        display: none; /* Hide the images and ContactUs card */
+    }
+}

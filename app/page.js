@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React from "react";
 import { useRef } from "react";
@@ -87,7 +87,8 @@ export default function Home() {
             image="/svgs/contact-email.svg"
             title="BY EMAIL"
             info="contactus@nitc.ac.in"
-            height="230px"
+            height="230px" //height of the component
+            width="286px" //width of the component
           />
         </div>
       </div>
