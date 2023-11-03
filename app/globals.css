@@ -19,6 +19,7 @@ body::-webkit-scrollbar {
 	--black: #000000;
 	--white: #ffffff;
 	--grey-50: #00000080;
+	--grey--80:#000000cc;
 	--border: #0000001a;
 }
 

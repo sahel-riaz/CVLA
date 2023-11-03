@@ -28,7 +28,7 @@
 
 .desc {
     margin-top: 12px;
-    color: var(--grey-50);
+    color: var(--grey-80);
     font-size: 14px;
     font-weight: 300;
     line-height: 22px; 
@@ -41,8 +41,10 @@
 }
 
 .label {
+    width: 56px;
     font-size: 14px;
     font-weight: 400;
+    line-height: 22px;
 }
 
 .text {
