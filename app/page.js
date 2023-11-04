@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <div className={styles["container"]}>
       <div className={styles["main-container"]}>
-        <Navbar />
+        {/* <Navbar /> */}
         <div className={styles["landing-container"]}>
           <div className={styles["landing-content-container"]}>
             <div className={styles["landing-title"]}>
