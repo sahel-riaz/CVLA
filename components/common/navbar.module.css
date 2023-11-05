@@ -7,6 +7,10 @@
     padding: 13px 46px;
 }
 
+.logo {
+    cursor: pointer;
+}
+
 .button-container {
     display: flex;
     gap: 30px;

@@ -8,7 +8,11 @@ export default function Navbar() {
   const router = useRouter();
   return (
     <div className={styles["container"]}>
-      <img src="/svgs/logo.svg" className={styles["logo"]} />
+      <img
+        src="/svgs/logo.svg"
+        className={styles["logo"]}
+        onClick={() => router.push("/")}
+      />
       <div className={styles["button-container"]}>
         <div className={styles["button"]} onClick={() => router.push("/")}>
           HOME

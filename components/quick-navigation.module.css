@@ -5,7 +5,7 @@
 
 .quick-links {
     margin-top: 32px;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     gap: 18px;
 }

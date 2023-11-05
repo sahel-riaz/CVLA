@@ -1,10 +1,19 @@
+"use client";
+
 import React from "react";
 import styles from "./footer.module.css";
+import { useRouter } from "next/navigation";
 
 export default function Footer() {
+  const router = useRouter();
+
   return (
     <div className={styles["container"]}>
-      <img src="/svgs/logo.svg" className={styles["logo"]} />
+      <img
+        src="/svgs/logo.svg"
+        className={styles["logo"]}
+        onClick={() => router.push("/")}
+      />
       <div className={styles["buttonWrapper"]}>
         <div className={styles["button"]}>ABOUT US</div>
         <div className={styles["button"]}>RESEARCH</div>

@@ -3,7 +3,6 @@
 import React from "react";
 import styles from "./projects.module.css";
 import { useRef } from "react";
-import PublicationsCard from "@/components/PublicationsCard";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import QuickNavigation from "@/components/QuickNavigation";
@@ -20,7 +19,7 @@ export default function Projects() {
 
   return (
     <div className={styles["container"]}>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className={styles["main-container"]}>
         <div className={styles["left-container"]}>
           <div className={styles["projects"]}>
