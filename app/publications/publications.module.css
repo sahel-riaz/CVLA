@@ -19,8 +19,12 @@
     width: 625px;
     display: flex;
     flex-direction: column;
-    gap:48px;
+    gap:38px;
 
+}
+
+.publications-wrapper {
+    padding-top: 10px;
 }
 
 .publication-title {
@@ -44,5 +48,5 @@
 .quick-nav-container {
     margin-top: 210px;
     position: sticky;
-    top: 0px;
+    top: 10px;
 }

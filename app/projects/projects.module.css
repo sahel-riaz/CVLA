@@ -18,7 +18,11 @@
     width: 625px;
     display: flex;
     flex-direction: column;
-    gap:48px;
+    gap:38px;
+}
+
+.projects-wrapper {
+    padding-top: 10px;
 }
 
 .project-title {
@@ -42,7 +46,7 @@
 .quick-nav-container {
     margin-top: 210px;
     position: sticky;
-    top: 0px;
+    top: 10px;
 }
 
 @media screen and (max-width: 1096px) {
@@ -59,8 +63,4 @@
         font-size: 20px;
     }
     
-    .quick-nav-container {
-        position: sticky;
-        top: 0px;
-    }
 }

@@ -6,6 +6,10 @@ import QuickLinks from "./sub/quick-link";
 
 export default function QuickNavigation({
   quickLinks,
+  journalsRef,
+  conferencesRef,
+  patentsRef,
+  bookChaptersRef,
   ongoingRef,
   completedRef,
 }) {
@@ -13,18 +17,6 @@ export default function QuickNavigation({
     label,
     desc,
   }));
-
-  // function handleClick(section) {
-  //   if (section === "Ongoing projects" && ongoingRef.current) {
-  //     console.log("scroll ongoinggg");
-  //     ongoingRef.current.scrollIntoView({ behavior: "smooth" });
-  //   } else if (section === "Completed projects" && completedRef.current) {
-  //     console.log("scroll completed");
-  //     completedRef.current.scrollIntoView({ behavior: "smooth" });
-  //   } else {
-  //     console.log("eroororrr");
-  //   }
-  // }
 
   return (
     <div className={styles["container"]}>
@@ -35,6 +27,10 @@ export default function QuickNavigation({
             key={index}
             label={data.label}
             desc={data.desc}
+            journalsRef={journalsRef}
+            conferencesRef={conferencesRef}
+            patentsRef={patentsRef}
+            bookChaptersRef={bookChaptersRef}
             ongoingRef={ongoingRef}
             completedRef={completedRef}
           />

@@ -1,17 +1,26 @@
+"use client";
+
 import React from "react";
 import styles from "./publications.module.css";
-import PublicationsCard from "@/components/PublicationsCard";
+import { useRef } from "react";
 import Navbar from "@/components/common/Navbar";
-import QuickNavigation from "@/components/QuickNavigation";
 import Footer from "@/components/common/Footer";
+import PublicationsCard from "@/components/PublicationsCard";
+import QuickNavigation from "@/components/QuickNavigation";
 
 export default function Publications() {
+  const journalsRef = useRef(null);
+  const conferencesRef = useRef(null);
+  const patentsRef = useRef(null);
+  const bookChaptersRef = useRef(null);
+
   const quickLinks = {
     Journals: "Explore the latest research in academic journals",
     Conferences: "Discover insights from conferences and symposiums",
     Patents: "Access patented innovations and intellectual property",
     "Book chapters": "Find in-depth knowledge in published book chapters",
   };
+
   return (
     <div className={styles["container"]}>
       <Navbar />
@@ -19,7 +28,7 @@ export default function Publications() {
         <div className={styles["left-container"]}>
           <div className={styles["publications"]}>
             <div className={styles["title"]}>Publications</div>
-            <div className={styles["publications-wrapper"]}>
+            <div className={styles["publications-wrapper"]} ref={journalsRef}>
               <div className={styles["publication-title"]}>Journals</div>
               <div className={styles["publication-list"]}>
                 <PublicationsCard
@@ -42,7 +51,10 @@ export default function Publications() {
                 />
               </div>
             </div>
-            <div className={styles["publications-wrapper"]}>
+            <div
+              className={styles["publications-wrapper"]}
+              ref={conferencesRef}
+            >
               <div className={styles["publication-title"]}>Conferences</div>
               <div className={styles["publication-list"]}>
                 <PublicationsCard
@@ -65,7 +77,7 @@ export default function Publications() {
                 />
               </div>
             </div>
-            <div className={styles["publications-wrapper"]}>
+            <div className={styles["publications-wrapper"]} ref={patentsRef}>
               <div className={styles["publication-title"]}>Patents</div>
               <div className={styles["publication-list"]}>
                 <PublicationsCard
@@ -88,7 +100,10 @@ export default function Publications() {
                 />
               </div>
             </div>
-            <div className={styles["publications-wrapper"]}>
+            <div
+              className={styles["publications-wrapper"]}
+              ref={bookChaptersRef}
+            >
               <div className={styles["publication-title"]}>Book Chapters</div>
               <div className={styles["publication-list"]}>
                 <PublicationsCard
@@ -115,7 +130,13 @@ export default function Publications() {
         </div>
         <div className={styles["right-container"]}>
           <div className={styles["quick-nav-container"]}>
-            <QuickNavigation quickLinks={quickLinks} />
+            <QuickNavigation
+              quickLinks={quickLinks}
+              journalsRef={journalsRef}
+              conferencesRef={conferencesRef}
+              patentsRef={patentsRef}
+              bookChaptersRef={bookChaptersRef}
+            />
           </div>
         </div>
       </div>
