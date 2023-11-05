@@ -45,3 +45,22 @@
     top: 0px;
 }
 
+@media screen and (max-width: 1096px) {
+
+    .title {
+        font-size: 40px;
+    }
+
+    .projects {
+        width: 550px;
+    }
+
+    .project-title {
+        font-size: 20px;
+    }
+    
+    .quick-nav-container {
+        position: sticky;
+        top: 0px;
+    }
+}

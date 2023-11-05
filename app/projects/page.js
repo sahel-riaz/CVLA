@@ -1,5 +1,8 @@
+"use client";
+
 import React from "react";
 import styles from "./projects.module.css";
+import { useRef } from "react";
 import PublicationsCard from "@/components/PublicationsCard";
 import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
@@ -7,18 +10,22 @@ import QuickNavigation from "@/components/QuickNavigation";
 import ProjectCard from "@/components/ProjectCard";
 
 export default function Projects() {
+  const ongoingRef = useRef(null);
+  const completedRef = useRef(null);
+
   const quickLinks = {
     "Ongoing projects": "Explore Ongoing Projects for current initiatives",
     "Completed projects": "Review Completed Projects for past achievements",
   };
+
   return (
     <div className={styles["container"]}>
-      <Navbar />
+      {/* <Navbar /> */}
       <div className={styles["main-container"]}>
         <div className={styles["left-container"]}>
           <div className={styles["projects"]}>
             <div className={styles["title"]}>Projects</div>
-            <div className={styles["projects-wrapper"]}>
+            <div className={styles["projects-wrapper"]} ref={ongoingRef}>
               <div className={styles["project-title"]}>Ongoing projects</div>
               <div className={styles["project-list"]}>
                 <ProjectCard
@@ -41,7 +48,7 @@ export default function Projects() {
                 />
               </div>
             </div>
-            <div className={styles["projects-wrapper"]}>
+            <div className={styles["projects-wrapper"]} ref={completedRef}>
               <div className={styles["project-title"]}>Completed projects</div>
               <div className={styles["project-list"]}>
                 <ProjectCard
@@ -68,7 +75,11 @@ export default function Projects() {
         </div>
         <div className={styles["right-container"]}>
           <div className={styles["quick-nav-container"]}>
-            <QuickNavigation quickLinks={quickLinks} />
+            <QuickNavigation
+              quickLinks={quickLinks}
+              ongoingRef={ongoingRef}
+              completedRef={completedRef}
+            />
           </div>
         </div>
       </div>
@@ -77,4 +88,3 @@ export default function Projects() {
   );
 }
 
-//  <QuickNavigation quickLinks={quickLinks} />

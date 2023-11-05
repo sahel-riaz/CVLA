@@ -18,3 +18,18 @@
     font-size: 14px;
     font-weight: 300;
 }
+
+@media screen and (max-width: 1096px) {
+    .link {
+        display: flex;
+        gap: 5px;
+    }
+    
+    .link-label {
+        font-size: 16px;
+    }
+    
+    .desc {
+        font-size: 13px;
+    }
+}

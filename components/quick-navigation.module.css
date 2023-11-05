@@ -9,3 +9,9 @@
     flex-direction: column;
     gap: 18px;
 }
+
+@media screen and (max-width:1096px) {
+    .title {
+        font-size: 20px;
+    }
+}

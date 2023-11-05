@@ -11,7 +11,7 @@ export default function ProjectCard({
 }) {
   return (
     <div className={styles["container"]}>
-      <img src={image} />
+      <img src={image} className={styles["image"]} />
       <div className={styles["content"]}>
         <div className={styles["date"]}>{date}</div>
         <div className={styles["title"]}>{title}</div>

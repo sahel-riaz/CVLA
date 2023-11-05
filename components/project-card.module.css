@@ -2,11 +2,12 @@
     border-bottom: 1px solid var(--border);
     padding-bottom: 32px;
     cursor: pointer;
+    background-color: pink;
+    margin: 0;
 }
 
 .image {
     width: 311px;
-    height: 175px;
 }
 
 .content {
@@ -64,4 +65,41 @@
 .read-more-text {
     font-size: 14px;
     font-weight: 400;
+}
+
+@media screen and (max-width:1096px) {
+
+    .image {
+        width: 300px;
+    }
+    
+    .date {
+        color: var(--grey-50);
+        font-size: 12px;
+        font-weight: 300;
+    }
+    
+    .title {
+        font-size: 22px; 
+    }
+    
+    .desc {
+        font-size: 13px;
+    }
+    
+    .info-wrapper {
+        gap: 8px;
+    }
+    
+    .label {
+        font-size: 13px;
+    }
+    
+    .text {
+        font-size: 13px;
+    }
+    
+    .read-more-text {
+        font-size: 13px;
+    }
 }
