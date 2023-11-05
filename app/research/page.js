@@ -7,7 +7,7 @@ import Footer from "@/components/common/Footer";
 export default function Research() {
   return (
     <div className={styles["big-container"]}>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className={styles["container"]}>
         <div className={styles["research-container"]}>
           <div className={styles["heading"]}>Research</div>

@@ -5,8 +5,6 @@
     width: calc(100vw - 92px);
     border-bottom: 1px solid var(--border);
     padding: 13px 46px;
-    /* padding: 13px 46px; */
-    /* flex-shrink: 0; */
 }
 
 .button-container {
