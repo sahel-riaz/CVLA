@@ -35,7 +35,12 @@ export default function Navbar() {
         >
           PROJECTS
         </div>
-        <div className={styles["button"]}>PEOPLE</div>
+        <div
+          className={styles["button"]}
+          onClick={() => router.push("/people")}
+        >
+          PEOPLE
+        </div>
         <div className={styles["button"]}>EVENTS</div>
         <div
           className={styles["button"]}

@@ -5,7 +5,7 @@ export default function PeopleCard({
   photo,
   name,
   designation,
-  contactNumber,
+contactNumber,
   email,
 }) {
   return (
