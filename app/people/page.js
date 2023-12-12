@@ -33,6 +33,18 @@ export default function page() {
                   contactNumber="9999999999"
                   email="prabum@nitc.ac.in"
                 />
+                <PeopleCard
+                  photo="/svgs/prabhu-sir.png"
+                  name="Dr. Prabu Mohandas"
+                  contactNumber="9999999999"
+                  email="prabum@nitc.ac.in"
+                />
+                <PeopleCard
+                  photo="/svgs/prabhu-sir.png"
+                  name="Dr. Prabu Mohandas"
+                  contactNumber="9999999999"
+                  email="prabum@nitc.ac.in"
+                />
               </div>
             </div>
             <div className={styles["people-wrapper"]}>

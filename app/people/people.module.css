@@ -9,7 +9,6 @@
     font-size: 48px;
     font-style: normal;
     font-weight: 600;
-    line-height: normal;
     align-self: flex-start;
 }
 
@@ -36,7 +35,76 @@
 
 .people-container {
     margin-top: 96px;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 70px;
 }
 
+@media screen and (max-width:1164px) {
+
+    .heading {
+        font-size: 40px;
+    }
+
+    .subheading {
+        font-size: 20px;
+    }
+
+}
+
+@media screen and (max-width:1092px) {
+    
+    .heading {
+        font-size: 35px;
+    }
+
+    .subheading {
+        font-size: 20px;
+    }
+
+    .people-container {
+        gap: 60px;
+        row-gap: 75px
+    }
+
+}
+
+@media screen and (max-width: 992px) {
+
+    .heading {
+        font-size: 35px;
+    }
+
+    .subheading {
+        font-size: 15px;
+    }
+
+    .people-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+        row-gap: 75px
+    }
+
+}
+
+@media screen and (max-width: 582px) {
+
+    .heading {
+        font-size: 35px;
+    }
+
+    .subheading {
+        font-size: 18px;
+    }
+
+    .people-wrapper {
+        margin-top: 30px;
+    }
+
+    .people-container {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 50px;
+        row-gap: 75px
+    }
+    
+}

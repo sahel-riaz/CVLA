@@ -27,7 +27,7 @@ contactNumber,
           </div>
         </div>
         <div className={styles["college"]}>
-          National Institute of Technology, Calicut<br></br>Kerala, 673601
+          National Institute of Technology, Calicut Kerala, 673601
         </div>
       </div>
     </div>
