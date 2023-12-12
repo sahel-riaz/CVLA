@@ -5,7 +5,7 @@ export default function PeopleCard({
   photo,
   name,
   designation,
-  contactNumber,
+contactNumber,
   email,
 }) {
   return (
@@ -27,7 +27,7 @@ export default function PeopleCard({
           </div>
         </div>
         <div className={styles["college"]}>
-          National Institute of Technology, Calicut<br></br>Kerala, 673601
+          National Institute of Technology, Calicut Kerala, 673601
         </div>
       </div>
     </div>

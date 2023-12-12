@@ -19,7 +19,7 @@ export default function Projects() {
 
   return (
     <div className={styles["container"]}>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className={styles["main-container"]}>
         <div className={styles["left-container"]}>
           <div className={styles["projects"]}>

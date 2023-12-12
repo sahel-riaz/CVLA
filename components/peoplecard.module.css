@@ -4,7 +4,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: fit-content;
     padding: 0 28px 28px 28px;
     position: relative;
 }
@@ -13,8 +12,9 @@
     position: absolute;
     top: -60px;
 }
+
 .content-container {
-    margin-top: 162px;
+    margin-top: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +33,7 @@
 }
 
 .contact-wrapper {
-    margin-top: 50px;
+    margin-top: 40px;
     display: flex;
     flex-direction: column;
     gap:4px;   
@@ -52,10 +52,92 @@
 }
 
 .college {
+    width: 300px;
     margin-top: 12px;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     color: var(--grey-50);
     text-align: center;
+}
+
+@media screen and (max-width:1260px) {
+
+    .container {
+        padding: 0 20px 20px 20px;
+    }
+
+    .content-container {
+        margin-top: 150px;
+    }
+
+    .photo {
+        width: 185px;
+    }
+    
+    .name {
+        font-size: 16px;
+    }
+
+    .designation {
+        font-size: 12px;
+    }
+
+    .contact-wrapper {
+        margin-top: 30px;
+    }
+
+    .contact {
+        font-size: 12px;
+    }
+
+    .college {
+        width: 260px;
+        font-size: 12px;
+    }
+
+}
+
+@media screen and (max-width: 1092px) {
+
+    .container {
+        padding: 0 16px 16px 16px;
+    }
+
+    .photo {
+        width: 165px;
+    }
+    
+    .content-container {
+        margin-top: 135px;
+    }
+    
+    .college {
+        width: 240px;
+    }
+    
+}
+
+@media screen and (max-width: 992px) {
+
+    .college {
+        width: 220px;
+    }
+
+}
+
+@media screen and (max-width: 582px) {
+
+    .container {
+        padding: 0 14px 14px 14px;
+    }
+
+    .content-container {
+        margin-top: 125px;
+    }
+
+    .college {
+        width: 200px;
+    }
+
 }
