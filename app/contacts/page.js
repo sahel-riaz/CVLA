@@ -15,22 +15,22 @@ export default function Contacts() {
             image="/svgs/contact-call.svg"
             title="BY PHONE"
             info="+91 9999999999"
-            height="260px"
-            width="286px"
+            // height="260px"
+            // width="286px"
           />
           <ContactUs
             image="/svgs/contact-loc.svg"
             title="FIND US"
             info="National Institute of Technology Calicut, Kerala 673601"
-            height="260px"
-            width="286px"
+            // height="260px"
+            // width="286px"
           />
           <ContactUs
             image="/svgs/contact-email.svg"
             title="BY EMAIL"
             info="contactus@nitc.ac.in"
-            height="260px"
-            width="286px"
+            // height="260px"
+            // width="286px"
           />
         </div>
       </div>

@@ -3,15 +3,69 @@
     flex-direction: column;
     align-items: center;
     padding: 100px 100px;
+
 }
 
 .heading {
     font-size: 48px;
     font-weight: 600;
+    text-align: center;
 }
 
 .cards-container {
     margin-top: 48px;
     display: flex;
     gap: 90px;
+}
+
+@media screen and (max-width:1115px) {
+
+    .content-container {
+        padding: 70px 100px;
+    }
+
+    .heading {
+        font-size: 42px;
+    }
+
+    .cards-container {
+        gap: 70px;
+    }
+
+}
+
+@media screen and (max-width:940px) {
+
+    .content-container {
+        padding: 55px 100px;
+    }
+
+    .heading {
+        font-size: 42px;
+    }
+
+    .cards-container {
+        margin-top: 46px;
+        gap: 60px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:540px) {
+
+    .content-container {
+        padding: 40px 100px;
+    }
+
+    .heading {
+        font-size: 45px;
+    }
+
+    .cards-container {
+        margin-top: 35px;
+        gap: 50px;
+        display: flex;
+        flex-direction: column;
+    }
 }
