@@ -118,6 +118,34 @@ export default function page() {
             </div>
           </div>
         </div>
+        <div className={styles["content"]}>
+          <div className={styles["heading"]}>Faculties</div>
+          <div className={styles["people-wrappers"]}>
+            <div className={styles["people-wrapper"]}>
+              {/* <div className={styles["subheading"]}>Ph.D students</div> */}
+              <div className={styles["people-container"]}>
+                <PeopleCard
+                  photo="/svgs/prabhu-sir.png"
+                  name="Dr. Prabu Mohandas"
+                  contactNumber="9999999999"
+                  email="prabum@nitc.ac.in"
+                />
+                <PeopleCard
+                  photo="/svgs/prabhu-sir.png"
+                  name="Dr. Prabu Mohandas"
+                  contactNumber="9999999999"
+                  email="prabum@nitc.ac.in"
+                />
+                <PeopleCard
+                  photo="/svgs/prabhu-sir.png"
+                  name="Dr. Prabu Mohandas"
+                  contactNumber="9999999999"
+                  email="prabum@nitc.ac.in"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <Footer />
     </div>

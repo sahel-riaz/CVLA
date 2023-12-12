@@ -2,13 +2,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: calc(100vw - 92px);
     border-bottom: 1px solid var(--border);
     padding: 13px 46px;
 }
 
 .logo {
     cursor: pointer;
+}
+
+.hamburger-icon {
+    display: none;
+    cursor: pointer;
+    width: 20px;
 }
 
 .button-container {
@@ -20,4 +25,116 @@
 
 .button {
     cursor: pointer;
+}
+
+@media screen and (min-width: 946px) {
+
+    .button-dropdown {
+      display: flex !important;
+      opacity: 1 !important;
+      background-color: transparent !important;
+      position: relative !important;
+      width: auto !important;
+      height: auto !important;
+      z-index: initial !important;
+      transition: none !important;
+      gap: 30px;
+      font-size: 18px;
+    }
+  
+    .button-dropdown.show {
+      display: flex !important;
+      opacity: 1 !important;
+      background-color: transparent !important;
+      transition: none !important;
+    }
+    
+    .button-dropdown.show .button {
+      color: initial !important; 
+    }
+  
+    .button-dropdown.show .button:active {
+      color: initial !important; 
+    }
+  
+    .hamburger-icon {
+      display: none; 
+    }
+}
+
+@media screen and (max-width:1200px) {
+
+    .container {
+        padding: 10px 40px;
+    }
+
+    .logo {
+        width: 165px;
+    }
+
+    .button-dropdown {
+        font-size: 16px;
+        gap: 25px;
+    }
+
+}
+
+@media screen and (max-width:1040px) {
+
+    .logo {
+        width: 145px;
+    }
+
+    .button-dropdown {
+        font-size: 14px;
+        gap: 20px;
+    }
+
+}
+
+@media screen and (max-width: 945px) {
+
+    .container {
+        padding: 10px 15px;
+    }
+    
+    .logo {
+        width: 145px;
+    }    
+
+    .hamburger-icon {
+        display: block;
+    }
+    
+    .button-dropdown {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        z-index: 999;
+        opacity: 0;
+        transition: opacity 1s ease-in;
+    }
+
+    .button-dropdown.show {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 25px;
+        gap: 25px;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.9);
+        opacity: 1; 
+    }
+    
+    .button-dropdown.show .button {
+        color: white;
+    }
+
+    .button-dropdown.show .button:active {
+        color: var(--grey-50);
+    }
 }

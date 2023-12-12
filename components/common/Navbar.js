@@ -1,11 +1,18 @@
 "use client";
 
 import React from "react";
+import { useState } from "react";
 import styles from "./navbar.module.css";
 import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const router = useRouter();
+  const [nav, setNav] = useState(false);
+
+  function handleNav() {
+    setNav(!nav);
+  }
+
   return (
     <div className={styles["container"]}>
       <img
@@ -14,39 +21,50 @@ export default function Navbar() {
         onClick={() => router.push("/")}
       />
       <div className={styles["button-container"]}>
-        <div className={styles["button"]} onClick={() => router.push("/")}>
-          HOME
-        </div>
+        <img
+          src="/svgs/hamburger.svg"
+          className={styles["hamburger-icon"]}
+          onClick={handleNav}
+        />
         <div
-          className={styles["button"]}
-          onClick={() => router.push("/research")}
+          className={`${styles["button-dropdown"]} ${
+            nav ? styles["show"] : ""
+          }`}
         >
-          RESEARCH
-        </div>
-        <div
-          className={styles["button"]}
-          onClick={() => router.push("/publications")}
-        >
-          PUBLICATIONS
-        </div>
-        <div
-          className={styles["button"]}
-          onClick={() => router.push("/projects")}
-        >
-          PROJECTS
-        </div>
-        <div
-          className={styles["button"]}
-          onClick={() => router.push("/people")}
-        >
-          PEOPLE
-        </div>
-        <div className={styles["button"]}>EVENTS</div>
-        <div
-          className={styles["button"]}
-          onClick={() => router.push("/contacts")}
-        >
-          CONTACT US
+          <div className={styles["button"]} onClick={() => router.push("/")}>
+            HOME
+          </div>
+          <div
+            className={styles["button"]}
+            onClick={() => router.push("/research")}
+          >
+            RESEARCH
+          </div>
+          <div
+            className={styles["button"]}
+            onClick={() => router.push("/publications")}
+          >
+            PUBLICATIONS
+          </div>
+          <div
+            className={styles["button"]}
+            onClick={() => router.push("/projects")}
+          >
+            PROJECTS
+          </div>
+          <div
+            className={styles["button"]}
+            onClick={() => router.push("/people")}
+          >
+            PEOPLE
+          </div>
+          <div className={styles["button"]}>EVENTS</div>
+          <div
+            className={styles["button"]}
+            onClick={() => router.push("/contacts")}
+          >
+            CONTACT US
+          </div>
         </div>
       </div>
     </div>
