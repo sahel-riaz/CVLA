@@ -8,6 +8,7 @@ import Footer from '@/components/common/Footer'
 import PublicationsCard from '@/components/PublicationsCard'
 import QuickNavigation from '@/components/QuickNavigation'
 import { pb } from '@/lib/pocketbase'
+import Link from 'next/link'
 
 export default function Publications() {
 	const journalsRef = useRef(null)
@@ -64,13 +65,14 @@ export default function Publications() {
 								<div className={styles['publication-title']}>Journals</div>
 								<div className={styles['publication-list']}>
 									{journals?.map((journal, index) => (
-										<PublicationsCard
-											key={index}
-											image={journal?.thumbnail}
-											date={journal?.date}
-											title={journal?.title}
-											references={journal?.citation}
-										/>
+										<Link href={`/publications/${journal?.id}`} key={index}>
+											<PublicationsCard
+												image={journal?.thumbnail}
+												date={journal?.date}
+												title={journal?.title}
+												references={journal?.citation}
+											/>
+										</Link>
 									))}
 								</div>
 							</div>
@@ -80,13 +82,14 @@ export default function Publications() {
 								<div className={styles['publication-title']}>Conferences</div>
 								<div className={styles['publication-list']}>
 									{conferences?.map((conference, index) => (
-										<PublicationsCard
-											key={index}
-											image={conference?.thumbnail}
-											date={conference?.date}
-											title={conference?.title}
-											references={conference?.citation}
-										/>
+										<Link href={`/publications/${conference?.id}`} key={index}>
+											<PublicationsCard
+												image={conference?.thumbnail}
+												date={conference?.date}
+												title={conference?.title}
+												references={conference?.citation}
+											/>
+										</Link>
 									))}
 								</div>
 							</div>
@@ -96,13 +99,14 @@ export default function Publications() {
 								<div className={styles['publication-title']}>Patents</div>
 								<div className={styles['publication-list']}>
 									{patents?.map((patent, index) => (
-										<PublicationsCard
-											key={index}
-											image={patent?.thumbnail}
-											date={patent?.date}
-											title={patent?.title}
-											references={patent?.citation}
-										/>
+										<Link href={`/publications/${patent?.id}`} key={index}>
+											<PublicationsCard
+												image={patent?.thumbnail}
+												date={patent?.date}
+												title={patent?.title}
+												references={patent?.citation}
+											/>
+										</Link>
 									))}
 								</div>
 							</div>
@@ -112,13 +116,14 @@ export default function Publications() {
 								<div className={styles['publication-title']}>Book Chapters</div>
 								<div className={styles['publication-list']}>
 									{bookChapters?.map((bookChapter, index) => (
-										<PublicationsCard
-											key={index}
-											image={bookChapter?.thumbnail}
-											date={bookChapter?.date}
-											title={bookChapter?.title}
-											references={bookChapter?.citation}
-										/>
+										<Link href={`/publications/${bookChapter?.id}`} key={index}>
+											<PublicationsCard
+												image={bookChapter?.thumbnail}
+												date={bookChapter?.date}
+												title={bookChapter?.title}
+												references={bookChapter?.citation}
+											/>
+										</Link>
 									))}
 								</div>
 							</div>
