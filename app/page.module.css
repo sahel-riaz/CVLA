@@ -8,7 +8,6 @@
 .landing-container {
     padding: 0 150px 0 150px;
     display: flex;
-    gap: 95px;
     align-items: center;
     justify-content: space-between;
 }
@@ -40,8 +39,10 @@
     background-color: var(--black);
     cursor: pointer;
 }
+
 .explore-button:hover {
-    /* scale */
+    transform: scale(1.15); 
+    transition: transform 0.3s ease;
 }
 
 .landing-svg {
@@ -49,7 +50,7 @@
 }
 
 .learn-more {
-    margin-bottom: 26px;
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -141,47 +142,62 @@
 
 @media (max-width: 900px) {
 
-    .main-container {
-        height:auto;
-    }
-
     .landing-container {
+        flex-direction: column;
         margin-top: 20px;
         padding: 0 20px;
         gap: 10px;
+        text-align: center;
     }
+
+    .landing-svg {
+        order: -1;
+        margin-bottom: 45px;
+    }
+
     .landing-title {
         font-size: 45px;
     }
+
     .landing-byline {
         font-size: 20px;
     }
+
     .explore-button {
-        padding: 12px 18px;
-        margin-top: 25px;
+        display: none;
     }
+
+    .learn-more {
+        margin-bottom: 45px;
+    }
+
     .about-us-container {
         margin-top: 50px;
         padding: 0 20px 0;
     }
+
     .title {
-        font-size: 24px;
+        font-size: 35px;
     }
+
     .about-us-content p,
     .join-us-content p,
     .join-us-content ol {
         font-size: 16px;
         line-height: 24px;
     }
+
     .join-us-container {
         margin-top: 25px;
         padding: 0 20px;
         gap: 10px;
         margin-bottom: 70px; 
     }
+
     .join-us-content ol {
         line-height: 30px;
     }
+
     .contact-card {
         margin-top: 40px;
     }
@@ -190,13 +206,12 @@
     .landing-svg {
         max-width: 60%;
     }
+
     .contact-card {
         height: 140px;
         width: 180px;
     }
 
-    .learn-more,
-    .landing-svg,
     .about-us-svg,
     .contact-card {
         display: none;
@@ -204,40 +219,55 @@
 }
 
 @media (max-width: 500px) {
-    .main-container {
-        height: auto;
-    }
 
     .landing-container {
+        flex-direction: column;
         margin-top: 20px;
         padding: 0 10px;
         gap: 5px;
+        text-align: center;
     }
+    
+    .landing-svg {
+        order: -1;
+        margin-bottom: 10px;
+    }
+    
     .landing-title {
-        font-size: 30px;
+        font-size: 35px;
+        
     }
+    
     .landing-byline {
         font-size: 15px;
     }
-    .explore-button {
-        /* padding: 12px 18px;
-        margin-top: 25px; */
-        display: none;
+
+    .learn-more {
+        gap: 5px;
+        font-size: 15px;
     }
+
+    .arrow-svg {
+        width: 25px;
+    }
+
     .about-us-container {
         margin-top: 45px;
         padding: 10px;
         gap: 5px;
     }
+
     .title {
-        font-size: 22px;
+        font-size: 32px;
     }
+
     .about-us-content p,
     .join-us-content p,
     .join-us-content ol {
         font-size: 14px;
         line-height: 20px;
     }
+
     .join-us-container {
         margin-top: 25px;
         padding: 0 10px;
@@ -249,10 +279,9 @@
         line-height: 26px;
     }
 
-    .learn-more,
-    .landing-svg,
     .about-us-svg,
     .contact-card {
         display: none;
     }
+
 }
