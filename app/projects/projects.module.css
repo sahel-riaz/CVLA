@@ -8,7 +8,6 @@
     border-right: 1px solid var(--border);
 }
 
-
 .projects {
     margin-top: 48px;
     width: 625px;
@@ -126,7 +125,8 @@
     }
 
     .projects {
-        width: 300px;
+        gap:28px;
+        width: 350px;
     }
     
     .project-title {
