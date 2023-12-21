@@ -4,7 +4,7 @@ import styles from './peoplecard.module.css'
 export default function PeopleCard({ photo, name, designation, contactNumber, email }) {
 	return (
 		<div className={styles['container']}>
-			<img src={photo} className={styles['photo']} className={styles['photo']} />
+			<img src={photo} className={styles['photo']} />
 			<div className={styles['content-container']}>
 				<div className={styles['name']}>{name}</div>
 				<div className={styles['designation']}>
