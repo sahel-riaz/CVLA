@@ -1,153 +1,78 @@
-import React from "react";
-import styles from "./people.module.css";
-import Navbar from "@/components/common/Navbar";
-import Footer from "@/components/common/Footer";
-import PeopleCard from "@/components/PeopleCard";
+'use client'
 
-export default function page() {
-  return (
-    <div className={styles["container"]}>
-      <Navbar />
-      <div className={styles["main-container"]}>
-        <div className={styles["content"]}>
-          <div className={styles["heading"]}>Students</div>
-          <div className={styles["people-wrappers"]}>
-            <div className={styles["people-wrapper"]}>
-              <div className={styles["subheading"]}>Ph.D students</div>
-              <div className={styles["people-container"]}>
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-              </div>
-            </div>
-            <div className={styles["people-wrapper"]}>
-              <div className={styles["subheading"]}>M.Tech students</div>
-              <div className={styles["people-container"]}>
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-              </div>
-            </div>
-            <div className={styles["people-wrapper"]}>
-              <div className={styles["subheading"]}>B.Tech students</div>
-              <div className={styles["people-container"]}>
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-              </div>
-            </div>
-            <div className={styles["people-wrapper"]}>
-              <div className={styles["subheading"]}>Interns</div>
-              <div className={styles["people-container"]}>
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className={styles["content"]}>
-          <div className={styles["heading"]}>Faculties</div>
-          <div className={styles["people-wrappers"]}>
-            <div className={styles["people-wrapper"]}>
-              {/* <div className={styles["subheading"]}>Ph.D students</div> */}
-              <div className={styles["people-container"]}>
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-                <PeopleCard
-                  photo="/svgs/prabhu-sir.png"
-                  name="Dr. Prabu Mohandas"
-                  contactNumber="9999999999"
-                  email="prabum@nitc.ac.in"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
+import styles from './people.module.css'
+import Navbar from '@/components/common/Navbar'
+import Footer from '@/components/common/Footer'
+import PeopleCard from '@/components/PeopleCard'
+import { pb } from '@/lib/pocketbase'
+import { useEffect, useState } from 'react'
+
+export default function People() {
+	const [scholars, setScholars] = useState([])
+	const [faculties, setFaculties] = useState([])
+
+	useEffect(() => {
+		;(async () => {
+			const peopleRecords = await pb.collection('people').getFullList({
+				$autoCancel: false,
+			})
+
+			const tempScholars = []
+			const tempFaculties = []
+
+			for (let r of peopleRecords) {
+				r.photo = pb.getFileUrl(r, r.photo)
+				if (r.type == 'scholars') tempScholars.push(r)
+				else if (r.type == 'faculties') tempFaculties.push(r)
+			}
+
+			setScholars(tempScholars)
+			setFaculties(tempFaculties)
+		})()
+	}, [])
+
+	return (
+		<div className={styles['container']}>
+			<Navbar />
+			<div className={styles['main-container']}>
+				<div className={styles['content']}>
+					<div className={styles['heading']}>Scholars</div>
+					<div className={styles['people-wrappers']}>
+						<div className={styles['people-wrapper']}>
+							<div className={styles['people-container']}>
+								{scholars?.map((person, index) => (
+									<PeopleCard
+										key={index}
+										photo={person?.photo}
+										name={person?.name}
+										contactNumber={person?.number}
+										email={person?.email}
+									/>
+								))}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className={styles['content']}>
+					<div className={styles['heading']}>Faculties</div>
+					<div className={styles['people-wrappers']}>
+						<div className={styles['people-wrapper']}>
+							<div className={styles['people-container']}>
+								{faculties?.map((person, index) => (
+									<PeopleCard
+										key={index}
+										photo={person?.photo}
+										name={person?.name}
+										contactNumber={person?.number}
+										email={person?.email}
+									/>
+								))}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<Footer />
+		</div>
+	)
 }

@@ -1,143 +1,143 @@
 .container {
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0 28px 28px 28px;
-    position: relative;
+	border: 1px solid var(--border);
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 28px 28px 28px;
+	position: relative;
 }
 
 .photo {
-    position: absolute;
-    top: -60px;
+	position: absolute;
+	top: -60px;
 }
 
 .content-container {
-    margin-top: 160px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	margin-top: 160px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .name {
-    font-size: 18px;
-    font-weight: 700;
+	font-size: 18px;
+	font-weight: 700;
 }
 
 .designation {
-    margin-top: 8px;
-    font-size: 14px;
-    color: var(--grey-50);
-    text-align: center;
+	margin-top: 8px;
+	font-size: 14px;
+	color: var(--grey-50);
+	text-align: center;
 }
 
 .contact-wrapper {
-    margin-top: 40px;
-    display: flex;
-    flex-direction: column;
-    gap:4px;   
-    align-items: center;
+	margin-top: 40px;
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	align-items: center;
 }
 
 .contact {
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    font-size: 14px;
+	display: flex;
+	gap: 8px;
+	align-items: center;
+	font-size: 14px;
+}
+
+.photo {
+	width: 180px;
+	height: 180px;
+	border-radius: 50%;
+	border: 3px solid var(--grey-20);
+	box-shadow: 0px 2px 10px 0px var(--grey-20);
 }
 
 .contact p {
-    margin: 0;
+	margin: 0;
 }
 
 .college {
-    width: 300px;
-    margin-top: 12px;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    color: var(--grey-50);
-    text-align: center;
+	width: 300px;
+	margin-top: 12px;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 500;
+	color: var(--grey-50);
+	text-align: center;
 }
 
-@media screen and (max-width:1260px) {
+@media screen and (max-width: 1260px) {
+	.container {
+		padding: 0 20px 20px 20px;
+	}
 
-    .container {
-        padding: 0 20px 20px 20px;
-    }
+	.content-container {
+		margin-top: 150px;
+	}
 
-    .content-container {
-        margin-top: 150px;
-    }
+	.photo {
+		width: 185px;
+	}
 
-    .photo {
-        width: 185px;
-    }
-    
-    .name {
-        font-size: 16px;
-    }
+	.name {
+		font-size: 16px;
+	}
 
-    .designation {
-        font-size: 12px;
-    }
+	.designation {
+		font-size: 12px;
+	}
 
-    .contact-wrapper {
-        margin-top: 30px;
-    }
+	.contact-wrapper {
+		margin-top: 30px;
+	}
 
-    .contact {
-        font-size: 12px;
-    }
+	.contact {
+		font-size: 12px;
+	}
 
-    .college {
-        width: 260px;
-        font-size: 12px;
-    }
-
+	.college {
+		width: 260px;
+		font-size: 12px;
+	}
 }
 
 @media screen and (max-width: 1092px) {
+	.container {
+		padding: 0 16px 16px 16px;
+	}
 
-    .container {
-        padding: 0 16px 16px 16px;
-    }
+	.photo {
+		width: 165px;
+	}
 
-    .photo {
-        width: 165px;
-    }
-    
-    .content-container {
-        margin-top: 135px;
-    }
-    
-    .college {
-        width: 240px;
-    }
-    
+	.content-container {
+		margin-top: 135px;
+	}
+
+	.college {
+		width: 240px;
+	}
 }
 
 @media screen and (max-width: 992px) {
-
-    .college {
-        width: 220px;
-    }
-
+	.college {
+		width: 220px;
+	}
 }
 
 @media screen and (max-width: 582px) {
+	.container {
+		padding: 0 14px 14px 14px;
+	}
 
-    .container {
-        padding: 0 14px 14px 14px;
-    }
+	.content-container {
+		margin-top: 125px;
+	}
 
-    .content-container {
-        margin-top: 125px;
-    }
-
-    .college {
-        width: 200px;
-    }
-
+	.college {
+		width: 200px;
+	}
 }

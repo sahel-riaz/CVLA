@@ -1,73 +1,74 @@
 html,
 body {
-  font-family: "Inter";
-  color: var(--black);
-  scroll-behavior: smooth;
-  height: 100%;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+	font-family: 'Inter';
+	color: var(--black);
+	scroll-behavior: smooth;
+	height: 100%;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 
-  background-color: var(--white);
-  padding: 0;
-  margin: 0;
+	background-color: var(--white);
+	padding: 0;
+	margin: 0;
 }
 
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 
 :root {
-  --black: #000000;
-  --white: #ffffff;
-  --grey-50: #00000080;
-  --grey--80: #000000cc;
-  --border: #0000001a;
+	--black: #000000;
+	--white: #ffffff;
+	--grey-50: #00000080;
+	--grey-20: #00000020;
+	--grey--80: #000000cc;
+	--border: #0000001a;
 }
 
 input:focus,
 textarea:focus {
-  outline: none;
+	outline: none;
 }
 
 input,
 textarea {
-  border: none;
-  font-family: inherit;
+	border: none;
+	font-family: inherit;
 
-  color: var(--black);
+	color: var(--black);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--grey-50);
-  font-size: 16px;
+	color: var(--grey-50);
+	font-size: 16px;
 }
 
 picture {
-  margin: none;
-  padding: none;
+	margin: none;
+	padding: none;
 }
 
 select,
 option {
-  font-family: inherit;
-  outline: 0px;
-  border: 0px;
+	font-family: inherit;
+	outline: 0px;
+	border: 0px;
 }
 
 select {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
 
-  appearance: none;
-  -webkit-appearance: none;
+	appearance: none;
+	-webkit-appearance: none;
 }
 
 select::-webkit-scrollbar {
-  width: 0;
+	width: 0;
 }
 
 a {
-  all: unset;
+	all: unset;
 }
