@@ -26,6 +26,9 @@ export default function People() {
 				else if (r.type == 'faculties') tempFaculties.push(r)
 			}
 
+			console.log(tempScholars)
+			console.log(tempFaculties)
+
 			setScholars(tempScholars)
 			setFaculties(tempFaculties)
 		})()
@@ -45,9 +48,10 @@ export default function People() {
 										key={index}
 										photo={person?.photo}
 										name={person?.name}
+										designation={person?.designation}
 										contactNumber={person?.number}
 										email={person?.email}
-										address={person?.address}
+										location={person?.location}
 									/>
 								))}
 							</div>
@@ -64,8 +68,10 @@ export default function People() {
 										key={index}
 										photo={person?.photo}
 										name={person?.name}
+										designation={person?.designation}
 										contactNumber={person?.number}
 										email={person?.email}
+										location={person?.location}
 									/>
 								))}
 							</div>
