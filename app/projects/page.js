@@ -7,6 +7,7 @@ import Navbar from "@/components/common/Navbar";
 import Footer from "@/components/common/Footer";
 import QuickNavigation from "@/components/QuickNavigation";
 import ProjectCard from "@/components/ProjectCard";
+import { pb } from "@/lib/pocketbase";
 
 export default function Projects() {
   const ongoingRef = useRef(null);

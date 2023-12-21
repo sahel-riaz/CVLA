@@ -58,7 +58,7 @@ export default function Navbar() {
           >
             PEOPLE
           </div>
-          <div className={styles["button"]}>EVENTS</div>
+          {/* <div className={styles["button"]}>EVENTS</div> */}
           <div
             className={styles["button"]}
             onClick={() => router.push("/contacts")}
