@@ -47,6 +47,7 @@ export default function People() {
 										name={person?.name}
 										contactNumber={person?.number}
 										email={person?.email}
+										address={person?.address}
 									/>
 								))}
 							</div>
