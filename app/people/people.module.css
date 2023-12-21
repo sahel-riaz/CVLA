@@ -1,19 +1,20 @@
 .main-container {
-    margin-top: 100px;
+    margin: 100px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 75px;
 }
+
+/* .content {
+    margin-bottom: 120px;
+} */
 
 .heading {
     font-size: 48px;
     font-style: normal;
     font-weight: 600;
     align-self: flex-start;
-}
-
-.content {
-    margin-bottom: 150px;
 }
 
 .people-wrappers {
@@ -34,10 +35,10 @@
 }
 
 .people-container {
-    margin-top: 96px;
+    margin-top: 75px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 70px;
+    gap: 110px;
 }
 
 @media screen and (max-width:1164px) {
@@ -54,6 +55,10 @@
 
 @media screen and (max-width:1092px) {
     
+    .main-container {
+        margin-top: 90px;
+    }
+
     .heading {
         font-size: 35px;
     }
@@ -89,6 +94,10 @@
 
 @media screen and (max-width: 582px) {
 
+    .main-container {
+        margin: 45px 45px;
+    }
+
     .heading {
         font-size: 35px;
     }
@@ -98,13 +107,13 @@
     }
 
     .people-wrapper {
-        margin-top: 30px;
+        margin-top: 15px;
     }
 
     .people-container {
         grid-template-columns: repeat(1, 1fr);
         gap: 50px;
-        row-gap: 75px
+        row-gap: 100px;
     }
     
 }

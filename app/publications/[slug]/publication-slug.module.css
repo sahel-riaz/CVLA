@@ -16,6 +16,7 @@
     font-size: 36px;
     font-weight: 600;
     line-height: 48px; 
+    text-align: center;
 }
 
 .references {
@@ -24,11 +25,11 @@
     font-size: 18px;
     font-weight: 300;
     line-height: 28px;
+    text-align: center;
 }
 
 .date {
     display: flex;
-    align-self: flex-start;
     margin-top: 18px;
     color: var(--grey-50);
     font-size: 16px;
@@ -87,7 +88,7 @@
 @media (max-width: 500px) {
     .main-container {
       width: 90%;
-      margin: 10px;
+      margin: 45px;
     }
   
     .title {
