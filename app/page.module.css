@@ -239,7 +239,7 @@
     }
     
     .landing-byline {
-        font-size: 15px;
+        font-size: 14px;
     }
 
     .learn-more {
@@ -258,14 +258,14 @@
     }
 
     .title {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .about-us-content p,
     .join-us-content p,
     .join-us-content ol {
         font-size: 14px;
-        line-height: 20px;
+        line-height: 22px;
     }
 
     .join-us-container {

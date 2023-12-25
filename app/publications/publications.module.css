@@ -13,14 +13,12 @@
     font-weight: 600;
 }
 
-
 .publications {
     margin-top: 48px;
     width: 625px;
     display: flex;
     flex-direction: column;
     gap:38px;
-
 }
 
 .publications-wrapper {
@@ -49,4 +47,146 @@
     margin-top: 210px;
     position: sticky;
     top: 10px;
+}
+
+@media screen and (max-width:1092px) {
+    
+    .title {
+        font-size: 40px;
+    }
+
+    .publication-title{
+        font-size: 20px;
+    }
+
+    .publications {
+        width: 550px;
+    }
+
+}
+
+@media screen and (max-width: 1020px) {
+
+
+    .title {
+        font-size: 38px;
+    }
+
+    .publication-title{
+        font-size: 18px;
+    }
+
+    .publications {
+        width: 500px;
+    }
+
+    .right-container {
+        padding-left: 35px
+    }
+
+}
+
+@media screen and (max-width: 945px) {
+
+    .left-container {
+        border: none;
+    }
+
+    .right-container {
+        display: none;
+    }
+
+    .title {
+        font-size: 40px;
+    }
+
+    .publication-title{
+        font-size: 20px;
+    }
+
+    .publications {
+        width: 650px;
+        gap:15px;
+    }
+
+    .publication-list {
+        margin-top: 32px;
+    }
+    
+}
+
+@media screen and (max-width:746px) {
+    
+
+    .title {
+        font-size: 38px;
+    }
+
+    .publication-title{
+        font-size: 18px;
+    }
+
+    .publications {
+        width: 550px;
+        gap:18px;
+    }
+
+    .left-container {
+        padding: 0;
+    }
+
+}
+
+@media screen and (max-width: 632px) {
+
+    .title {
+        font-size: 35px;
+    }
+
+    .publication-title {
+        font-size: 16px;
+    }
+
+    .publications{
+        width: 450px;
+    }
+    
+}
+
+@media screen and (max-width: 532px) {
+
+    .title {
+        font-size: 35px;
+    }
+
+    .publication-title {
+        font-size: 18px;
+    }
+
+    .publications{
+        width: 400px;
+        gap:10px;
+    }
+
+    .publication-list {
+        margin-top: 25px;
+    }
+
+}
+
+@media screen and (max-width: 420px) {
+
+    .title {
+        font-size: 35px;
+    }
+
+    .publication-title {
+        font-size: 16px;
+    }
+
+    .publications{
+        width: 350px;
+        gap:6px;
+    }
+
 }
