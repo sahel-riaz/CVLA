@@ -19,9 +19,9 @@ export default function Navbar() {
 			<div className={styles['button-container']}>
 				<img src='/svgs/hamburger.svg' className={styles['hamburger-icon']} onClick={handleNav} />
 				<div className={`${styles['button-dropdown']} ${nav ? styles['show'] : ''}`}>
-					<div className={styles['button']} onClick={() => router.push('/')}>
+					{/* <div className={styles['button']} onClick={() => router.push('/')}>
 						HOME
-					</div>
+					</div> */}
 					<div className={styles['button']} onClick={() => router.push('/research')}>
 						RESEARCH
 					</div>

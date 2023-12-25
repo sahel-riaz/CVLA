@@ -1,6 +1,7 @@
 'use client'
 import React from 'react'
 import { useRef } from 'react'
+import { useRouter } from 'next/navigation'
 import styles from './page.module.css'
 import Navbar from '@/components/common/Navbar'
 import Footer from '@/components/common/Footer'
@@ -8,6 +9,7 @@ import ContactUs from '@/components/ContactUs'
 
 export default function Home() {
 	const aboutUsRef = useRef(null)
+	const router = useRouter()
 	const handleClick = () => {
 		if (aboutUsRef.current) {
 			aboutUsRef.current.scrollIntoView({ behavior: 'smooth' })
@@ -26,8 +28,7 @@ export default function Home() {
 							Explore the future of Computer Vision, Learning, and Applications with our Research
 							Group. Innovation awaits.
 						</div>
-						<div className={styles['explore-button']}>
-							{/* <div>Explore</div> */}
+						<div className={styles['explore-button']} onClick={() => router.push('/publications')}>
 							<img src='/svgs/arrow_outward.svg' />
 							Explore
 						</div>
