@@ -25,10 +25,8 @@
 }
 
 .info {
-    width: fit-content;
     margin-top: 24px;
     font-size: 16px;
-    font-weight: 500;
     color: var(--grey-50);
     text-align: center;
 }

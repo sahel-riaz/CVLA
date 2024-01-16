@@ -148,7 +148,7 @@
 @media screen and (max-width: 532px) {
 
     .date {
-        font-size: 10px;
+        font-size: 11px;
         align-self: center;
     }
 
@@ -161,28 +161,15 @@
     }
 
     .read-more-text {
-        font-size: 10px;
+        font-size: 12px;
     }
 
 }
 
 @media screen and (max-width: 420px) {
 
-    .date {
-        font-size: 11px;
-    }
-
     .title {
-        font-size: 16px;
-        line-height: 25px;
-    }
-
-    .references {
-        font-size: 11px;
-    }
-
-    .read-more-text {
-        font-size: 11px;
+        line-height: 26px;
     }
 
 }

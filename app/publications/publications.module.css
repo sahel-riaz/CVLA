@@ -181,11 +181,11 @@
     }
 
     .publication-title {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     .publications{
-        width: 350px;
+        width: 365px;
         gap:6px;
     }
 
