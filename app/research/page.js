@@ -1,53 +1,55 @@
-import React from "react";
-import styles from "./research.module.css";
-import Navbar from "@/components/common/Navbar";
-import ResearchCard from "@/components/ResearchCard";
-import Footer from "@/components/common/Footer";
+'use client'
+
+import React, { useEffect, useState } from 'react'
+import styles from './research.module.css'
+import Navbar from '@/components/common/Navbar'
+import ResearchCard from '@/components/ResearchCard'
+import Footer from '@/components/common/Footer'
+import { pb } from '@/lib/pocketbase'
+import Link from 'next/link'
 
 export default function Research() {
-  return (
-    <div className={styles["big-container"]}>
-      <Navbar />
-      <div className={styles["container"]}>
-        <div className={styles["research-container"]}>
-          <div className={styles["heading"]}>Research</div>
-          <div className={styles["research-cards"]}>
-            <ResearchCard
-              author="Dr. Ashish Bamania"
-              startDate="23 September 2023"
-              endDate="Present"
-              title="Histogram Layers for Improved Target Classification"
-              sponsor="Massachusetts Institute of Technology Lincoln Laboratory"
-              image="/svgs/blank-image.svg"
-            />
-            <ResearchCard
-              author="Dr. Ashish Bamania"
-              startDate="23 September 2023"
-              endDate="Present"
-              title="Histogram Layers for Improved Target Classification"
-              sponsor="Massachusetts Institute of Technology Lincoln Laboratory"
-              image="/svgs/blank-image.svg"
-            />
-            <ResearchCard
-              author="Dr. Ashish Bamania"
-              startDate="23 September 2023"
-              endDate="Present"
-              title="Histogram Layers for Improved Target Classification"
-              sponsor="Massachusetts Institute of Technology Lincoln Laboratory"
-              image="/svgs/blank-image.svg"
-            />
-            <ResearchCard
-              author="Dr. Ashish Bamania"
-              startDate="23 September 2023"
-              endDate="Present"
-              title="Histogram Layers for Improved Target Classification"
-              sponsor="Massachusetts Institute of Technology Lincoln Laboratory"
-              image="/svgs/blank-image.svg"
-            />
-          </div>
-        </div>
-      </div>
-      <Footer />
-    </div>
-  );
+	const [research, setResearch] = useState([])
+
+	useEffect(() => {
+		;(async () => {
+			const researchRecords = await pb.collection('research').getFullList({
+				$autoCancel: false,
+			})
+
+			let tempResearch = []
+
+			for (let r of researchRecords) {
+				r.thumbnail = pb.getFileUrl(r, r.thumbnail)
+				tempResearch.push(r)
+			}
+			setResearch(tempResearch)
+		})()
+	})
+
+	return (
+		<div className={styles['big-container']}>
+			<Navbar />
+			<div className={styles['container']}>
+				<div className={styles['research-container']}>
+					<div className={styles['heading']}>Research</div>
+					<div className={styles['research-cards']}>
+						{research?.map((r, index) => (
+							<Link href={`/research/${r?.id}`} key={index}>
+								<ResearchCard
+									author={r.author}
+									startDate={new Date(r?.start).toISOString().slice(0, 10)}
+									endDate={new Date(r?.end).toISOString().slice(0, 10)}
+									title={r.title}
+									sponsor={r.sponsor}
+									image={r.thumbnail}
+								/>
+							</Link>
+						))}
+					</div>
+				</div>
+			</div>
+			<Footer />
+		</div>
+	)
 }

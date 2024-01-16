@@ -56,7 +56,11 @@ export default function Projects() {
 										<Link href={`/projects/${project?.id}`} key={index}>
 											<ProjectCard
 												image={project?.thumbnail}
-												date={project?.start + '-' + project?.end}
+												date={
+													new Date(project?.start).toISOString().slice(0, 10) +
+													' - ' +
+													new Date(project?.end).toISOString().slice(0, 10)
+												}
 												title={project?.title}
 												desc={project?.description}
 												sponsor={project?.sponsor}
@@ -75,7 +79,11 @@ export default function Projects() {
 										<Link href={`/projects/${project?.id}`} key={index}>
 											<ProjectCard
 												image={project?.thumbnail}
-												date={project?.start + ' - ' + project?.end}
+												date={
+													new Date(project?.start).toISOString().slice(0, 10) +
+													' - ' +
+													new Date(project?.end).toISOString().slice(0, 10)
+												}
 												title={project?.title}
 												desc={project?.description}
 												sponsor={project?.sponsor}

@@ -17,7 +17,6 @@ export default function Slug() {
 			const tempPublicationRecord = await pb.collection('publications').getOne(params?.slug, {
 				$autoCancel: false,
 			})
-			console.log(tempPublicationRecord)
 			tempPublicationRecord.thumbnail = pb.getFileUrl(
 				tempPublicationRecord,
 				tempPublicationRecord.thumbnail
@@ -33,7 +32,11 @@ export default function Slug() {
 				<div className={styles['main-container']}>
 					<div className={styles['title']}>{publication?.title}</div>
 					<div className={styles['references']}>{publication?.citation}</div>
-					<div className={styles['date']}>{publication?.date}</div>
+					{publication?.date ? (
+						<div className={styles['date']}>
+							{new Date(publication?.date).toISOString().slice(0, 10)}
+						</div>
+					) : null}
 					<img src={publication?.thumbnail} />
 					<div className={styles['paragraphs']}>
 						<div className={styles['text']}>{publication?.abstract}</div>

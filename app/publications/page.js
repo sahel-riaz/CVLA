@@ -68,7 +68,7 @@ export default function Publications() {
 										<Link href={`/publications/${journal?.id}`} key={index}>
 											<PublicationsCard
 												image={journal?.thumbnail}
-												date={journal?.date}
+												date={new Date(journal?.date).toISOString().slice(0, 10)}
 												title={journal?.title}
 												references={journal?.citation}
 											/>
@@ -85,7 +85,7 @@ export default function Publications() {
 										<Link href={`/publications/${conference?.id}`} key={index}>
 											<PublicationsCard
 												image={conference?.thumbnail}
-												date={conference?.date}
+												date={new Date(conference?.date).toISOString().slice(0, 10)}
 												title={conference?.title}
 												references={conference?.citation}
 											/>
@@ -102,7 +102,7 @@ export default function Publications() {
 										<Link href={`/publications/${patent?.id}`} key={index}>
 											<PublicationsCard
 												image={patent?.thumbnail}
-												date={patent?.date}
+												date={new Date(patent?.date).toISOString().slice(0, 10)}
 												title={patent?.title}
 												references={patent?.citation}
 											/>
@@ -119,7 +119,7 @@ export default function Publications() {
 										<Link href={`/publications/${bookChapter?.id}`} key={index}>
 											<PublicationsCard
 												image={bookChapter?.thumbnail}
-												date={bookChapter?.date}
+												date={new Date(bookChapter?.date).toISOString().slice(0, 10)}
 												title={bookChapter?.title}
 												references={bookChapter?.citation}
 											/>

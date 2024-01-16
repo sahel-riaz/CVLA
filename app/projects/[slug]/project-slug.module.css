@@ -1,0 +1,123 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-container {
+    width: 920px;
+    margin: 100px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 48px; 
+    text-align: center;
+}
+
+.references {
+    margin-top: 18px;
+    color: var(--grey-80);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+    text-align: center;
+}
+
+.date {
+    display: flex;
+    margin-top: 18px;
+    color: var(--grey-50);
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.main-container img {
+    margin-top: 42px;
+    width: 100%;
+}
+
+.text {
+    margin-top: 42px;
+    color: var(--grey-80);
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 36px;
+    text-align: justify;
+}
+
+@media (max-width: 984px) {
+
+    .main-container {
+      width: 90%;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .main-container {
+      width: 90%;
+      margin: 10px;
+    }
+  
+    .title {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  
+    .references {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  
+    .date {
+      font-size: 12px;
+    }
+  
+    .main-container img {
+      margin-top: 16px;
+    }
+  
+    .text {
+      font-size: 14px;
+      line-height: 24px;
+    }
+
+}
+
+@media (max-width: 500px) {
+
+    .main-container {
+      width: 90%;
+      margin: 45px;
+    }
+  
+    .title {
+      font-size: 21px;
+      line-height: 28px;
+    }
+  
+    .references {
+      font-size: 12px;
+      line-height: 20px;
+    }
+  
+    .date {
+      font-size: 12px;  
+    }
+  
+    .main-container img {
+      margin-top: 12px;
+    }
+  
+    .text {
+      font-size: 12px;
+      line-height: 20px;
+    }
+
+}
