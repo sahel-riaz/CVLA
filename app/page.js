@@ -45,15 +45,13 @@ export default function Home() {
 				<div className={styles['about-us-content']}>
 					<div className={styles['title']}>About us</div>
 					<p>
-						The Advanced Vision and Learning Lab (AVLL) seeks to develop novel artificial
-						intelligence (AI), machine learning (ML), and computer vision (CV) algorithms. We aim to
-						be world leaders in the AI/ML/CV community through innovative solutions, unique
-						perspectives, and reproducible research. Our lab seeks excellence in our research,
-						academic, and professional environments.<br></br>
-						<br></br> AVLL promotes intellectual, professional, and personal growth to achieve
-						desired research and learning outcomes. We hold ourselves accountable to create a
-						diverse, equitable, and inclusive space for all in the lab, at Texas A&M University, and
-						in the broader community.
+						Computer Vision, Learning and Applications Research Group (CVLA) is a unique, dynamic
+						and a not for profit research body in the field of artificial intelligence, machine
+						learning, and computer vision. Our group provides strategic research insights on machine
+						learning and computer vision to achieve your desired research and learning outcomes. We
+						hold ourselves accountable to motivate and train young talent to undertake research in
+						computer vision and allied fields to address problems in our daily life and to serve
+						society.
 					</p>
 				</div>
 			</div>
@@ -78,7 +76,7 @@ export default function Home() {
 					<ContactUs
 						image='/svgs/contact-email.svg'
 						title='BY EMAIL'
-						info='contactus@nitc.ac.in'
+						info='prabum@nitc.ac.in'
 						height='230px'
 						width='286px'
 					/>

@@ -10,6 +10,8 @@ import { useEffect, useState } from 'react'
 export default function People() {
 	const [scholars, setScholars] = useState([])
 	const [faculties, setFaculties] = useState([])
+	const [mtech, setMtech] = useState([])
+	const [interns, setInterns] = useState([])
 
 	useEffect(() => {
 		;(async () => {
@@ -19,18 +21,21 @@ export default function People() {
 
 			const tempScholars = []
 			const tempFaculties = []
+			const tempMtech = []
+			const tempInterns = []
 
 			for (let r of peopleRecords) {
 				r.photo = pb.getFileUrl(r, r.photo)
 				if (r.type == 'scholars') tempScholars.push(r)
 				else if (r.type == 'faculties') tempFaculties.push(r)
+				else if (r.type == 'mtech-btech') tempMtech.push(r)
+				else if (r.type == 'interns') tempInterns.push(r)
 			}
-
-			console.log(tempScholars)
-			console.log(tempFaculties)
 
 			setScholars(tempScholars)
 			setFaculties(tempFaculties)
+			setMtech(tempMtech)
+			setInterns(tempInterns)
 		})()
 	}, [])
 
@@ -49,7 +54,6 @@ export default function People() {
 										photo={person?.photo}
 										name={person?.name}
 										designation={person?.designation}
-										contactNumber={person?.number}
 										email={person?.email}
 										location={person?.location}
 									/>
@@ -58,6 +62,48 @@ export default function People() {
 						</div>
 					</div>
 				</div>
+				{mtech?.length > 0 ? (
+					<div className={styles['content']}>
+						<div className={styles['heading']}>MTech/BTech</div>
+						<div className={styles['people-wrappers']}>
+							<div className={styles['people-wrapper']}>
+								<div className={styles['people-container']}>
+									{mtech?.map((person, index) => (
+										<PeopleCard
+											key={index}
+											photo={person?.photo}
+											name={person?.name}
+											designation={person?.designation}
+											email={person?.email}
+											location={person?.location}
+										/>
+									))}
+								</div>
+							</div>
+						</div>
+					</div>
+				) : null}
+				{interns?.length > 0 ? (
+					<div className={styles['content']}>
+						<div className={styles['heading']}>Interns</div>
+						<div className={styles['people-wrappers']}>
+							<div className={styles['people-wrapper']}>
+								<div className={styles['people-container']}>
+									{interns?.map((person, index) => (
+										<PeopleCard
+											key={index}
+											photo={person?.photo}
+											name={person?.name}
+											designation={person?.designation}
+											email={person?.email}
+											location={person?.location}
+										/>
+									))}
+								</div>
+							</div>
+						</div>
+					</div>
+				) : null}
 				<div className={styles['content']}>
 					<div className={styles['heading']}>Faculties</div>
 					<div className={styles['people-wrappers']}>
@@ -69,7 +115,6 @@ export default function People() {
 										photo={person?.photo}
 										name={person?.name}
 										designation={person?.designation}
-										contactNumber={person?.number}
 										email={person?.email}
 										location={person?.location}
 									/>

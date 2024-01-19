@@ -17,14 +17,11 @@ export default function Footer() {
 				<div className={styles['button']} onClick={() => router.push('/publications')}>
 					PUBLICATIONS
 				</div>
-				<div className={styles['button']} onClick={() => router.push('/')}>
-					NEWS
+				<div className={styles['button']} onClick={() => router.push('/projects')}>
+					PROJECTS
 				</div>
 				<div className={styles['button']} onClick={() => router.push('/people')}>
 					PEOPLE
-				</div>
-				<div className={styles['button']} onClick={() => router.push('/')}>
-					EVENTS
 				</div>
 				<div className={styles['button']} onClick={() => router.push('/contacts')}>
 					CONTACT US
