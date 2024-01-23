@@ -56,10 +56,13 @@ export default function Projects() {
 										<Link href={`/projects/${project?.id}`} key={index}>
 											<ProjectCard
 												image={project?.thumbnail}
-												date={
-													new Date(project?.start).toISOString().slice(0, 10) +
-													' - ' +
-													new Date(project?.end).toISOString().slice(0, 10)
+												startDate={
+													project?.start
+														? new Date(project?.start).toISOString().slice(0, 10)
+														: null
+												}
+												endDate={
+													project?.end ? new Date(project?.end).toISOString().slice(0, 10) : null
 												}
 												title={project?.title}
 												desc={project?.description}
@@ -79,10 +82,13 @@ export default function Projects() {
 										<Link href={`/projects/${project?.id}`} key={index}>
 											<ProjectCard
 												image={project?.thumbnail}
-												date={
-													new Date(project?.start).toISOString().slice(0, 10) +
-													' - ' +
-													new Date(project?.end).toISOString().slice(0, 10)
+												startDate={
+													project?.start
+														? new Date(project?.start).toISOString().slice(0, 10)
+														: null
+												}
+												endDate={
+													project?.end ? new Date(project?.end).toISOString().slice(0, 10) : null
 												}
 												title={project?.title}
 												desc={project?.description}

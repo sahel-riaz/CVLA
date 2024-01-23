@@ -38,8 +38,8 @@ export default function Research() {
 							<Link href={`/research/${r?.id}`} key={index}>
 								<ResearchCard
 									author={r.author}
-									startDate={new Date(r?.start).toISOString().slice(0, 10)}
-									endDate={new Date(r?.end).toISOString().slice(0, 10)}
+									startDate={r?.start ? new Date(r?.start)?.toISOString().slice(0, 10) : null}
+									endDate={r?.end ? new Date(r?.end)?.toISOString().slice(0, 10) : null}
 									title={r.title}
 									sponsor={r.sponsor}
 									image={r.thumbnail}
